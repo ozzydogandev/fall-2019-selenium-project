@@ -8,7 +8,7 @@ public class EtsyTitleVerify {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         //go to etsy  --> data URL : https://www.etsy.com/

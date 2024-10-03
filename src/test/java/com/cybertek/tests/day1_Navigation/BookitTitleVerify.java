@@ -16,7 +16,7 @@ https://cybertek-reservation-qa.herokuapp.com/sign-in
 
       */
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://cybertek-reservation-qa.herokuapp.com/sign-in");

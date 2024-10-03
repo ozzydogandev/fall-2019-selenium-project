@@ -17,7 +17,7 @@ public class VerifyLogin {
     Verift the welcome massage "Welcome to the Secure Area. When you are done click logout below."
      */
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://practice.cybertekschool.com/login");

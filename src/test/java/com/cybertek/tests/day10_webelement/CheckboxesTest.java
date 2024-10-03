@@ -16,7 +16,7 @@ public class CheckboxesTest {
     @BeforeMethod
     public void beforeMethod() {
         driver = WebDriverFactory.getDriver("chrome");
-        driver.get("http://practice.cybertekschool.com/checkboxes");
+        driver.get("http://practice.cydeo.com/checkboxes");
 
     }
 

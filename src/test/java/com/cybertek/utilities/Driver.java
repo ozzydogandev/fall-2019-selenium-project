@@ -9,7 +9,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
@@ -26,11 +25,11 @@ public class Driver {
 
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    
                     driver = new ChromeDriver(new ChromeOptions().addArguments("disable-extensions"));
                     break;
                 case "chrome-headless":
-                    WebDriverManager.chromedriver().setup();
+                    
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
                 case "firefox":
@@ -60,10 +59,6 @@ public class Driver {
                         throw new WebDriverException("Your OS doesn't support Safari");
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
-                    break;
-                case "opera":
-                    WebDriverManager.operadriver().setup();
-                    driver = new OperaDriver();
                     break;
 
             }

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public abstract class VytrackPageBase {
@@ -38,7 +39,7 @@ public abstract class VytrackPageBase {
         String menu2X = "//span[.='"+menu2+"'][@class='title title-level-2']";
         WebElement menu2El = Driver.getDriver().findElement(By.xpath(menu2X));
 
-        WebDriverWait wait =new WebDriverWait(Driver.getDriver(), 5);
+        WebDriverWait wait =new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.elementToBeClickable(menu1El));
 

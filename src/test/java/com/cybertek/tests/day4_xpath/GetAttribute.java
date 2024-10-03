@@ -18,7 +18,7 @@ public class GetAttribute {
                    type='submit'
          */
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://practice.cybertekschool.com/forgot_password");

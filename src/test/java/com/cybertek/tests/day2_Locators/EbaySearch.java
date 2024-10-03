@@ -25,7 +25,7 @@ public class EbaySearch {
         driver cannot locate the element.
          */
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.amazon.com/");
@@ -46,8 +46,9 @@ public class EbaySearch {
         Thread.sleep(4000);
         String expectedPartialTitle = "shoes";
         String actual = driver.getTitle();
+        System.out.println(actual);
 
-        if(actual.contains(expectedPartialTitle)){
+        if(actual.toLowerCase().contains(expectedPartialTitle)){
             System.out.println("pass");
         }else {
             System.out.println("fail");

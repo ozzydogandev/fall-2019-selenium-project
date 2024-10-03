@@ -10,7 +10,7 @@ import java.util.jar.JarOutputStream;
 
 public class getText {
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         //go to forgot password web page

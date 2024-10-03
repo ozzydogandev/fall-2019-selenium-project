@@ -9,7 +9,7 @@ public class FirstClass {
 
     public static void main(String[] args) throws InterruptedException {
         //binary the driver and browsers
-        WebDriverManager.chromedriver().setup();
+
 
        //WebDriver object  --> Interface
         //I have a driver

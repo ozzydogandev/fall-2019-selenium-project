@@ -2,7 +2,7 @@ package com.cybertek.base;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.cybertek.pages.*;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
@@ -14,6 +14,7 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
+import java.time.Duration;
 
 public abstract class VytrackTestBase {
     protected WebDriver driver;
@@ -26,14 +27,14 @@ public abstract class VytrackTestBase {
     protected CreateContactsPage createContactsPage;
 
     protected ExtentReports report;
-    private ExtentHtmlReporter htmlReporter;
+    private ExtentSparkReporter htmlReporter;
     protected ExtentTest test;
 
     @BeforeSuite
     public void setUpSuite() {
         report = new ExtentReports();
         String path = System.getProperty("user.dir") + "/test-output/report.html";
-        htmlReporter = new ExtentHtmlReporter(path);
+        htmlReporter = new ExtentSparkReporter(path);
         htmlReporter.config().setReportName("Vytrack Automated Tests");
 
         report.attachReporter(htmlReporter);
@@ -52,7 +53,7 @@ public abstract class VytrackTestBase {
     public void setUpMethod(@Optional String url) {
         System.out.println("url = " + url);
         driver = Driver.getDriver();
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         softAssert = new SoftAssert();
 
         if (url == null) {

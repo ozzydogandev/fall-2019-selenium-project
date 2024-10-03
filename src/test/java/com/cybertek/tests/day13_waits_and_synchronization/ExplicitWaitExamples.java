@@ -27,7 +27,7 @@ public class ExplicitWaitExamples {
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("firefox");
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @AfterMethod

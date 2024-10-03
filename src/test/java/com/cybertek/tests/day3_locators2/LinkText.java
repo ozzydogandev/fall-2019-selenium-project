@@ -15,7 +15,7 @@ public class LinkText {
         //<a>  a tag is link . in this situation, we will use linkText locator
         //to locate the element
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://practice.cybertekschool.com/dynamic_loading");

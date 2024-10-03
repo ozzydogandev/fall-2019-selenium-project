@@ -16,7 +16,7 @@ public class FindElemet {
         // go to cybertek okta login page
         //write email to the text box
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
         driver.get("https://cybertekschool.okta.com/");
         driver.manage().window().maximize();

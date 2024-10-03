@@ -2,7 +2,7 @@ package com.cybertek.tests.day18_html_report;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ public class ExtentReportExample {
     ExtentReports report;
 
     // used to create the html report
-    ExtentHtmlReporter htmlReporter;
+    ExtentSparkReporter htmlReporter;
 
     // used to define a test in report, do logging, mark test results
     ExtentTest test;
@@ -28,7 +28,7 @@ public class ExtentReportExample {
         // + "/test-output/report.html" --> create folder test-output and in it create file report.html
         String path = System.getProperty("user.dir")+"/test-output/report.html";
         // initialize the html reporter with the given path
-        htmlReporter = new ExtentHtmlReporter(path);
+        htmlReporter = new ExtentSparkReporter(path);
 
         // set name for the report
         htmlReporter.config().setReportName("Vytrack Automated Tests");

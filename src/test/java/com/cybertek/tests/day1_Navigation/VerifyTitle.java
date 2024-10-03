@@ -18,7 +18,7 @@ public class VerifyTitle {
 
         //connect browser and driver
         //setup browser
-        WebDriverManager.chromedriver().setup();
+        
 
         WebDriver driver = new ChromeDriver();
 

@@ -10,7 +10,7 @@ public class GetAttributeValue {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://practice.cybertekschool.com/login");

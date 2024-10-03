@@ -23,7 +23,7 @@ public class ClicikvsSubmit {
 
          */
 
-        WebDriverManager.chromedriver().setup();
+        
         WebDriver driver = new ChromeDriver();
 
         //go to forgot password web page

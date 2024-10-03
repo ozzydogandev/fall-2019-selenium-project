@@ -28,7 +28,7 @@ public class login {
     public static void main(String[] args) {
 
 
-     WebDriverManager.chromedriver().setup();
+     
     WebDriver driver = new ChromeDriver();
         driver.get("https://app.vytrack.com/user/login");
         driver.manage().window().maximize();

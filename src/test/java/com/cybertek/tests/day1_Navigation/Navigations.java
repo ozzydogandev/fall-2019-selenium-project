@@ -19,7 +19,7 @@ public class Navigations {
         // go to practice --> go to google --> back to practice
         // --> forward to google
 
-        WebDriverManager.chromedriver().setup();
+        
 
         WebDriver driver = new ChromeDriver();
 

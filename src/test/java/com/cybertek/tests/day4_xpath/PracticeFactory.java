@@ -10,7 +10,7 @@ public class PracticeFactory {
     public static void main(String[] args) {
         //go to google
 
-     //   WebDriverManager.chromedriver().setup();
+     //   
     //    WebDriver driver = new ChromeDriver();
 
 
